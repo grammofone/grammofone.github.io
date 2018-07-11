@@ -1,11 +1,32 @@
 <!DOCTYPE HTML>
 <html>
  <head>
+ 	<meta charset="utf-8">
+ 	<style>
+ 		#playlist{
+ 			list-style: none;
+ 		}
+ 		#playlist li a{
+ 			color: blue;
+			text-decoration: none;
+ 		}
+ 		#playlist .current-song a{
+ 			color: purple;
+ 		}
+ 	</style>
  </head>  
  <body> 
-<audio autoplay loop controls >
- <source src="1.mp3" type="audio/mpeg">
- <source src="3.mp3" type="audio/mp3; codecs=vorbis">
+<audio autoplay src="" controls id="audioPlayer">
 </audio>
+<ul id="playlist">
+	<li class="current-song"><a href="1.mp3">1</a></li>
+	<li><a href="2.mp3">2</a></li>
+	<li><a href="3.mp3">3</a></li>
+</ul>
+<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+<script src="audioPlayer.js"></script>
+<script> 
+audioPlayer();
+</script>
  </body>
 </html>
